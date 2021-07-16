@@ -45,6 +45,9 @@ return slicedArray;
     // ask for input
     int yourAnswer = input.nextInt();
     // check the answer
+    if (yourAnswer > 118) {
+      System.out.println("😑 Please type a number smaller than 118!");
+    } else {
     int result = linearSearch(elements, randomElement);
     int recievedInput = yourAnswer - 1;
     int correctAnswer = result + 1;
@@ -54,6 +57,7 @@ return slicedArray;
       System.out.println("Sorry, but you need some more practice. The correct answer is " + correctAnswer + ".");
     }
   }
+}
     // close the object with Scanner class
     input.close();
   }
