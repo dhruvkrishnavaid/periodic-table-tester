@@ -45,8 +45,10 @@ return slicedArray;
     // ask for input
     int yourAnswer = input.nextInt();
     // check the answer
-    if (yourAnswer > 118) {
-      System.out.println("😑 Please type a number smaller than 118!");
+    if (yourAnswer > userChosenLength) {
+      System.out.println("😑 Please type a number smaller than " + userChosenLength + "!");
+    } else if (yourAnswer < 1) {
+      System.out.println("Error! Please type a number equal to or greater than 1!");
     } else {
     int result = linearSearch(elements, randomElement);
     int recievedInput = yourAnswer - 1;
